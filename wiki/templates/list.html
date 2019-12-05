@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% load static %}
+<img src="{% static 'odd-photos-coats.jpg' %}" alt="odd-photo">
+
   <h3>Wikis {% if pages %}<small class="text-muted">({{ pages|length }} Page{{ pages|length|pluralize:"s" }})</small>{% endif %}</h3>
   <hr>
   {% if pages %}
@@ -13,7 +16,3 @@
     <div class="alert alert-primary" role="alert">No pages to display.</div>
   {% endif %}
 {% endblock %}
-
-
-
-

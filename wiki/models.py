@@ -5,7 +5,6 @@ from django.utils.text import slugify
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-
 class Page(models.Model):
     """ Represents a single wiki page. """
     title = models.CharField(max_length=settings.WIKI_PAGE_TITLE_MAX_LENGTH, unique=True,
